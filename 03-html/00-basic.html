@@ -21,7 +21,7 @@
   <!-- internal css -->
   <style>
     header {
-      border-bottom: 4px solid #22fe05;
+      border-bottom: 4px solid #249115;
     }
   </style>
   <!-- External CSS : 이거 사용  -->
@@ -66,8 +66,267 @@
       <h2>link 태그</h2>
     </header>
     <section>
+       <!-- 절대경로 -->
        <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">Html Link</a>
+       <!-- 상대경로 -->
+       <a href="./images/01-01-daisy-w.jpeg">daisy image</a>
+       <a href="images/01-01-daisy-w.jpeg">daisy image222</a>
+       <a href="mailto:miu1120e@naver.com">miu1120e@naver.com</a>
+       <!-- 웹접근성 -->
+       <a href="https://www.naver.com" target="_blank" title="새창열림">네이버</a>
+       <a href="#main"> main 바로가기</a>
+       <a href="./sub/sub.html#sec2">sub.html> id 값이 sec2 바로가기</a>
     </section>
+    
+    <header>
+      <h2>image 태그</h2>
+    </header>
+    <section>
+      <!-- 상대경로 -->
+      <img src="./images/01-01-daisy-w.jpeg" alt="daisy" width="200">
+      <!-- widtj.height 속성에 단위 생략 -->
+      <img src="./images/01-01-daisy-w.jpeg" alt="daisy" style="width: 300px;" >
+      <!-- 절대경로 -->
+      <a href="https://www.brain-study.co.kr/wm/" target="_blank" title="새창열림">
+       <img src="https://ssl.pstatic.net/melona/libs/1446/1446115/53373490e17d4cd4f71a_20230612161444430.jpg" alt="뇌새김 단2시까지만 500원 여보,매달4권으로 말문이 트였어! 서울대 출신이 개발한 영어 학습지! 본혜택은 이후에도 동일하게 적용될 수 있음/렌탈시 최초 1회" width="100%">
+      </a>
+
+      <!-- 반응형이미지 -->
+      <picture>
+        <!-- width 650px 이상일 경우 -->
+        <source media="(min-width:650px)" srcset="images/img_food.jpg">
+        <!-- width 465px 이상일 경우 -->
+        <source media="(min-width:465px)" srcset="./images/img_car.jpg">
+        <img src="./images/img_girl.jpg" alt="뒷통수 아줌마" width="100%">
+      </picture>
+      </section>
+
+      <header>
+        <h2>table태그</h2>
+      </header>
+      <section>
+      </style>
+      <table>
+        <!-- 웹접근성 요건 추가 -->
+        <caption>테이블 설명 :자세한 설명</caption>
+        <!-- 열의 가로 사이즈 -->
+        <colgroup>
+          <!-- 열의 갯수 -->
+         <col>
+         <col width="20%">
+         <col span="4" width="15%">
+        </colgroup>
+        <!-- 테이블의 구분 -->
+        <thead>
+          <tr>
+            <th scope="col" rowspan="2" colspan="2" >과목</th>
+            <th scope="col" colspan="4">1-1</th>
+          </tr>
+          <tr>
+            <th scope="col" >다니엘</th>
+            <th scope="col">민지</th>
+            <th scope="col">하니</th>
+            <th scope="col">혜인</th>
+          </tr>
+        </thead>
+        <!-- 테이블의 본문 -->
+        <tbody>
+          <tr>
+            <th scope="row" rowspan="3">공통</th>
+            <th scope="row">국어</th>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+           </tr>  
+           <tr>
+            <th scope="row">영어</th>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+           </tr>  
+           <tr>
+            <th scope="row">수학</th>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+           </tr>  
+        </tbody>
+        <!-- 테이블의 요약 -->
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="2">평균점수</th>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+          </tr>
+        </tfoot>      
+      </table>
+    </section>
+    <style>
+       table, tr,td,th {
+            border: 2px solid #1302ff80;
+          }
+          table{
+            width: 100%;
+          }
+          td{
+            height: 60px;
+            thead{
+              background: #2f49b0;
+            }
+            tfoot{
+              background: antiquewhite;
+            }
+    </style>
+
+    <header>
+     <h2>list태그</h2>
+    </header>
+    <section>
+      <h3>좋아하는 동물</h3>
+      <!-- 순서 없는 목록 -->
+      <ul>
+         <li>강아지</li>
+         <li>고양이</li>
+         <li>물고기</li>
+      </ul>
+
+      <!-- 순서가 있는 목록 -->
+      <ol>
+        <li>고양이</li>
+        <li>물고기</li>
+        <li>강아지</li>
+      </ol>
+
+      <!-- nav -->
+      <h3>메인 메뉴</h3>
+      <!-- depth1 -->
+      <ul>
+       <li>
+        탑
+        <!-- depth2 -->
+        <ul>
+          <li>
+            블라우스
+           <ul>
+             <li>depth3</li>
+             <li>depth3</li>
+             <li>depth3</li>
+           </ul>
+        </li>
+          <li>티</li>
+          <li>셔츠</li>
+          <li>니트</li>
+        </ul>
+      </li>  
+      <li>
+        아우터
+        <!-- depth2 -->
+        <ul>
+          <li>자켓</li>
+          <li>코트</li>
+          <li>
+            가디건
+            <ul>
+              <li>depth3</li>
+              <li>depth3</li>
+              <li>depth3</li>
+            </ul>
+          </li>
+          <li>머플러</li>
+        </ul>
+      </li>  
+      <li>
+        팬츠
+        <!-- depth3 -->
+      <ul>
+        <li>청바지</li>
+        <li>짧은바지</li>
+        <li>긴바지</li>
+        <li>레깅스</li>
+      </ul>
+      </li>  
+      <li>
+        악세사리
+        <!-- depth4 -->
+        <ul>
+          <li>귀걸이</li>
+          <li>목걸이</li>
+          <li>반지</li>
+          <li>팔찌</li>
+        </ul>
+      </li>  
+    </ul>
+
+    <ul>
+      <li>
+        <a href="#">depth1</a>  
+        <ul>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">depth1</a>
+        <ul>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">depth1</a>
+        <ul>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">depth1</a>
+      </li>
+       <ul>
+         <li>
+          <a href="#">depth2</a>
+         </li>
+        <li>
+          <a href="#">depth2</a>
+        </li>
+       </ul>
+
+
+    </ul>
+    
+    </section>
+         
+    
+    <section id="nav">
+      <h2>nav</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, error, sed delectus dolorum exercitationem veritatis aliquam quisquam, corrupti odit sequi eaque molestiae quibusdam voluptatem totam. Porro debitis deserunt animi quae.</p>
+    </section>
+    <section>
+      <h2>c1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, error, sed delectus dolorum exercitationem veritatis aliquam quisquam, corrupti odit sequi eaque molestiae quibusdam voluptatem totam. Porro debitis deserunt animi quae.</p>
+    </section>
+    <section id="main">
+      <h2>main</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, error, sed delectus dolorum exercitationem veritatis aliquam quisquam, corrupti odit sequi eaque molestiae quibusdam voluptatem totam. Porro debitis deserunt animi quae.</p>
+      <a href="#nav">nav 바로가기</a>
+    </section> 
   </div>
   <!-- 주석태그 -->
   <!-- <p>hihihihihihi</p> -->
