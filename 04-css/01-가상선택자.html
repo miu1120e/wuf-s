@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상선택자/css</title>
+  <style>
+    /*  */
+    *{
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>가상선택자</h1>
+  <h2>순서</h2>
+
+  <ul class="lst">
+    <li>menu 1</li>
+    <li>menu 2</li>
+    <li>menu 3</li>
+    <li>menu 4</li>
+  </ul>
+  <style>
+    .lst {
+      border: 5px solid greenyellow;
+    }
+    .lst li{
+      border: 5px solid pink;
+      margin: 5px;
+    }
+    .lst li:first-child{
+      background: rgba(255, 255, 0, 0.269);}
+    .lst li:nth-child(2) {
+      background: rgb(21, 234, 127);
+    }
+    .lst li:nth-child(3){
+      background: #056cf2;
+    }
+    .lst li:last-child{
+      background: rgb(220, 3, 253);
+    }
+    .lst li:hover{
+      background: #000;
+      color: #fff;
+    }
+  </style>
+  <h2>링크 가상선택자</h2>
+  <a href="#">링크 가상선택자</a>
+  <style>
+    a{
+      font-size: 20px;
+      color:#000;
+    }
+    a:hover{
+      color:red;
+    }
+    a:active{
+      color: green;
+    }
+    a:visited{
+      color: aqua;
+    }
+ </style>
+
+
+ <h2> 가상 엘리먼트 선택자</h2>
+ <ul class="lst2">
+  <li><a href="#">공지사항글01</a></li>
+  <li><a href="#">공지사항글02</a></li>
+  <li><a href="#">공지사항글03</a></li>
+  <li><a href="#">공지사항글04</a></li>
+
+ </ul>
+
+
+ <style>
+  .lst2 li::before{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #4aec9d;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .lst2 a{
+    color:red;
+  }
+  .lst2 a::before{
+    content:'before';
+  }
+  
+  .lst2 li::after{
+    content:'';
+  }
+  .lst2 a::after{
+     content:'';
+     display: inline-block;
+     width: 10px;
+     height: 10px;
+     background: #4aec9d;
+     margin-left: 10px;
+  }
+</style>
+<ul class="lst3">
+  <li>menu1</li>
+  <li>menu2</li>
+  <li>menu3</li>
+  <li>menu4</li>
+</ul>
+<style>
+  .lst3{
+    display: flex;
+  }
+  .lst3 li::after{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: pink;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .lst3 li:last-child::after{
+    content: '';
+    display: none
+    }
+  .lst3 li::before{
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 50px;
+    background: #f40404;
+    margin: 10px;
+  }
+  .lst3 li::after{
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 50px;
+    background: #f40404;
+    margin: 10px;
+  }
+
+</style>
+
+
+
+
+
+</body>
+</html>

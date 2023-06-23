@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스모델/css</title>
+
+</head>
+<body>
+  <h1>박스모델</h1>
+
+  <h2>가로 사이즈</h2>
+  <!-- span 인라인 태그: width, height안들어감 -->
+  <div class="box1">
+    <span>span 태그</span>
+    <span>span 태그</span>
+    <!-- div 블록 태그: width, height 들어감 -->
+    <div></div>
+    <div></div>
+  </div>
+
+  <style>
+    .box1{
+      background: #000;
+    }
+    .box1 span{
+      /* width: 100px;
+      height: 100px; */
+      background: #bbfd74;
+    }
+    .box1 div{
+      width: 50%;
+      /* height: 100px; */
+      background: #d1f3fd;
+    }
+  </style>
+  <br><br><br><br>
+  
+  <h2>세로사이즈</h2>
+  <div class="box2">
+    <div>높이값</div>
+  </div>
+  <style>
+    .box2{
+      height: 100%;
+      background: gray;
+    }
+    .box2 div{
+      height: 100vh;
+      background: rgb(232, 250, 213);
+    }
+  </style>
+
+  <h2></h2>
+  <div class="box3">
+
+  </div>
+  <style>
+    .box3{
+      max-width: 500px;
+      min-width: 300%;
+      height: 100px;
+      margin: auto;
+      background: #2ede07;
+    }
+  </style>
+
+  <h2>margin</h2>
+  <div class="box4">
+    <div class="box4-1"></div>
+    <div class="box4-2"></div>
+    <div class="box4-3"></div>
+    <div class="box4-4"></div>
+    <div class="box4-5"></div>
+    <div class="box4-6"></div>
+  </div>
+
+  <style>
+    .box4{
+      margin: 10px 20px 30px 40px;
+      background: pink;
+    }
+    .box4 div{
+      width: 100px;
+      height: 100px;
+      background: rgb(188, 246, 253);
+    }
+    .box4 .box4-1{
+      margin-top: 100px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+
+    }
+    .box4 .box4-2{
+      margin:50px 50px;
+    }
+    .box4 .box4-3{
+      margin: 100px 100px;
+    }
+    .box4 .box4-4{
+      margin: 200px 300px 400px;
+    }
+    .box4 .box4-5{
+      margin: 0 auto;
+    }
+    .box4 .box4-6{
+      margin: inherit;
+    }
+  </style>
+
+  <h2>padding</h2>
+  <div class="box5">
+    <div>padding1</div>
+    <div>padding2padding2</div>
+    <div>padding3</div>
+    </div>
+    <style>
+      .box5 div{
+        display: inline-block;
+        border: 1px solid #31c7f9;
+        background: #08f6fa;
+
+      }
+      .box5 div:first-child{
+        padding: 10px;
+
+      }
+      .box5 div:nth-child(2){
+        margin: 0 20px;
+        padding: 20px 50px;
+        }
+      .box5 div:nth-child(3){
+        padding: 20px 50px 100px;
+      }
+
+
+    </style>
+    <div class="box6">
+      <div>padding4</div>    
+      <div>padding5</div> 
+      <div>padding6</div>
+      <div>padding7</div>
+      
+    </div>
+    <style>
+      .box6 div{
+        width: 100px;
+        height: 100px;
+        background: #09fabe;
+        /* border: 1px solid #000; */
+      }
+      .box6 div:nth-child(2) {
+        width: 60px;
+        height: 60px;
+        background: #f70accac;
+        padding: 20px;
+      }
+      .box6 div:nth-child(3){
+        padding: 10px 30px;
+        width: 40px;
+        height: 80px;
+      }
+      .box6 div:nth-child(4){
+        padding: 10px 30px;
+        box-sizing: border-box;
+        background: #eafa06;
+      }
+    </style>
+
+    <h2>border</h2>
+    <div class="box7">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <style>
+      .box7 div{
+        width: 100px;
+        height: 100px;
+        background: #586cde;
+      }
+      .box7 div:first-child{
+        border: 5px solid rgba(252, 7, 142, 0.5);
+        border-radius: 5px;
+      }
+      .box7 div:nth-child(2){
+        border: 5px dotted #000;
+        box-sizing: border-box;
+      }
+      .box7 div:nth-child(3){
+        border-left: 5px solid red;
+      }
+      .box7 div:nth-child(4){
+        border-bottom: 5px solid #f6fd b7;
+      }
+      
+    </style>
+    <br><br><br><br><br><br>
+  </body>
+</html>
