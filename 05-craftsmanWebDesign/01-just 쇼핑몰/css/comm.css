@@ -81,7 +81,7 @@
   padding: 10px 0;
 }
 .tabs {
-  width: 340px;
+  width: calc(100% / 2 - 230px);
 }
 .bnr {
   width: 395px;
@@ -90,5 +90,25 @@
   display: block;
 }
 .goto {
-  width: 420px;
+  width: calc(100% / 2 - 230px);
+}
+.goto ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 180px;  
+}
+.goto li{
+  width: calc(50% - 5px);
+  height: calc(50% - 5px);
+  background: #000; 
+}
+.goto a{
+  display: block;
+  height: 100%;
+  background: #f6d7d7;
+  background: #f6d7d7;
+  
+  
 }
