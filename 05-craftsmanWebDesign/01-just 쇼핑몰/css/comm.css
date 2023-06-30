@@ -12,18 +12,18 @@
 .wrap {
   width: 1200px;
   margin: 0 auto;
-  background: #fff;
+  
 }
 .header {
   height: 100px;
-  background-color: lightpink;
+  
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   height: 100px;
-  background-color: #fff;
+  
 }
 .logo {
   display: flex;
@@ -80,35 +80,131 @@
   justify-content: space-between;
   padding: 10px 0;
 }
-.tabs {
+/* tab */
+.tabs-wrap {
+  position: relative;
+  display: flex;
   width: calc(100% / 2 - 230px);
+}
+.tabs-wrap .tab-item {
+  width: 50%;
+}
+/* 비활성화 tab */
+.tabs-wrap .tab-item .tit {
+  height: 30px;
+  padding-top: 3px;
+  border-bottom: 2px solid #fff;
+  background: #f2f1e7;
+  text-align: center;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+/* 활성화 tab */
+.tabs-wrap .on .tit {
+  background: #d5d6d6;
+  color: #222222;
+}
+.tabs-wrap .tab-item .cont {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  height: 130px;
+  background: #ffffff;
+}
+.tabs-wrap .on .cont {
+  display: block;
+}
+.lst bbs {
+  padding-top: 13px;
+}
+.lst-bbs li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-top: -4px;
+  margin-right: 10px;
+  background: #222222;
+}
+.lst-bbs li a {
+  display: block;
+  line-height: 2;
+}
+.lst-bbs li {
+  display: flex;
+  align-items: center;
+}
+.lst-bbs li a:hover {
+  text-decoration-line: underline;
+}
+/* 갤러리 */
+.lst-gallery {
+  display: flex;
+  justify-content: space-between;
+}
+.lst-gallery li {
+  width: 106px;
+  padding-top: 5px;
+}
+.lst-gallery li p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  height: 100px;
+ 
+}
+.logo-foot a{
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.lst-sns {
+  display: flex;
+
+}
+.lst-sns li{
+  margin-left: 20px;
+
+}
+.lst-sns a{
+  display: block;
+  line-height: 100px;
+  justify-content: space-between
+  
 }
 .bnr {
   width: 395px;
 }
-.bnr a , bnr img {
+.bnr a,
+bnr img {
   display: block;
 }
 .goto {
   width: calc(100% / 2 - 230px);
 }
-.goto ul{
+.goto ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  height: 180px;  
+  height: 180px;
 }
-.goto li{
+.goto li {
   width: calc(50% - 5px);
   height: calc(50% - 5px);
-  background: #000; 
+  background: #222222;
 }
-.goto a{
+.goto a {
   display: block;
   height: 100%;
   background: #f6d7d7;
   background: #f6d7d7;
-  
-  
 }
