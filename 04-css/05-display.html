@@ -224,6 +224,82 @@
         }
     </style>
 
+    <h2>flex-grow</h2>
+    <div class="box-g box14">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <style>
+        .box14{
+            display: flex;
+        }
+        
+        .box14 div:nth-child(1){
+            flex-grow:1;
+        }
+        .box14 div:nth-child(2){
+            flex-grow:1;
+        }
+        .box14 div:nth-child(3){
+            flex-grow:2;
+        }
+    </style>
+
+    <h2>flex-shrink</h2>
+    <div class="box-g box15">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+     
+    </div>
+    <style>
+        .box15{
+            display: flex;
+        }
+        .box15 div:nth-child(3){
+            flex-shrink: 0;
+        }
+ 
+    </style>
+
+          
+ 
+    <div class="box-g box16">   
+        <div>가</div>
+        <div>가나</div>
+        <div>가나다라</div>
+      
+    </div>
+    <style>
+        .box16{
+            display: flex;
+            
+        }
+        .box16 div{
+            flex-basis: 0;
+            width: auto;
+            text-align: center;
+        }
+        .box16 div:nth-child(-n+2) {
+            flex-grow: 1;
+        }
+        .box16 div:last-child{
+            flex-grow: 3;
+        }
+
+    </style>
+    
+
 
     <br><br><br><br><br><br>
     <br><br><br><br><br><br>
