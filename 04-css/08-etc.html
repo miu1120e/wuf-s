@@ -4,16 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>etc/css</title>
+  <style>
+    *{
+      margin: 0;  
+      padding: 0;
+      list-style: 0;
+      text-decoration: none;
+      line-height: 1.5;
+      color: #000;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
   <h1>tooltip</h1>
 
   <div class="tooltip-wrap">
-    tooltip 보기
-    <div class="tooltip-item">Lorem ipsum dolor sit amet.</div>
+    tooltip 보기00000<br>
+    tooltip 보기00000
+    <div class="item top">TOP</div>
+    <div class="item bottom">bottom</div>
+    <div class="item left">left</div>
+    <div class="item right">right</div>
+
   </div>
 
   <style>
+    /* arrow */
+    .item::after{
+      content: '';
+      position: absolute;
+      border-width: 5px;
+      border-style: solid;
+      border-color: blue transparent transparent transparent;
+
+    }
+    .left::after{
+      top: 50%;
+      right: -10px;  
+      transform: rotate(-90deg) translateX(50%);
+    }
+    
+    .top::after{
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .bottom::after{
+      top: -10px;
+      left: 50%;
+      transform: rotate(180deg) translateX(50%);
+    }
+    .right::after{
+      top: 50%;
+      left: -10px;  
+      transform: rotate(90deg) translateX(-50%);
+    }
+    
+    .right{
+      position: absolute;
+      top: 0;
+      right: -60px;
+      margin-top: 12px;;
+
+    }
+    .left{
+      position: absolute;
+      top: 50%;
+      left: -60px;
+      margin-top: -12px;
+
+    }
+    .bottom {
+      position: absolute;
+      bottom: -35px;
+      left: 50%; 
+      transform: translateX(-50%);
+
+    }
+    .top{
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      margin-left: -25px;
+      /* width 50px 에서 반 */
+    }
+    
     .tooltip-wrap{
       display: inline-block;
       position: relative;
@@ -21,23 +97,71 @@
       font-weight: bold;
       font-size: 20px;
       color: lightseagreen;
-      background: lightgoldenrodyellow;
+      background: skyblue;
     }
-    .tooltip-item {
-      position: absolute; 
-      bottom:-100px;
-      left:50%;
+    .item {
       display: inline-block;
-      max-width: 100px;
-      padding: 5px 10px;
+      width: 50px;
+      padding: 5px 0;
       font-size: 12px;
       font-weight: normal;
       color: #fff;
-      background:#555;
+      background:red;
+      position: absolute; 
       border-radius: 5px;
-      transform: translateX(-50%);
+      opacity: 0.5;
+      text-align: center;
+      box-sizing: border-box;
+      /* transform: translateX(-50%); */
+      /* word-break: break-all; */
 
     }
+
+  
+    
   </style>
+
+
+  <h2>image style</h2>
+
+ <div class="image1">
+  <img src="https://images.unsplash.com/photo-1689106299184-1a71e2597fcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+ </div>
+
+<style>
+  .image1 img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 60%;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 5px solid #000;
+    padding: 5px;
+    filter: grayscale(50%);
+  }
+</style>
+
+<h2>mask</h2>
+<div class="image2"></div> 
+
+<style>
+  .image2{
+    height: 400px;
+    -webkit-mask-image: url(./images/w3logo.png);
+    mask-image: url(./images/w3logo.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background: url(https://images.unsplash.com/photo-1689106299184-1a71e2597fcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60)
+    no-repeat 0 -80px /contain;
+    
+    
+    
+  }
+</style>
+
+
+
+
 </body>
 </html>
