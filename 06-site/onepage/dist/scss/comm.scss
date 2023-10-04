@@ -1,9 +1,33 @@
-:root,
-[data-bs-theme="light"] {
-  --bs-primary: rgba(20, 217, 252, 0.39);
-  --bs-primary-rgb: 20, 217, 252;
+:root {
+  --sm: 768px;
+  --md: 992px;
+  --lg: 1200px;
+
+
+
+  --bs-primary: rgb(211, 247, 54);
+  --bs-primary-rgb: 211, 247, 54;
+  // --bs-bg-opacity: 0.39;
 }
 
 .section-g {
   padding: 100px 0;
 }
+.wrap {
+  padding-top: 71px;
+}
+// @media screen and (max-width: var(--sm)){
+// .wrap {
+//   padding-top: 71px;
+// }
+// }
+#header {
+  padding: 0 30px;
+}
+#jumbotron {
+  height: 50vh;
+}
+#contact {
+  height: 500px;
+}
+
