@@ -1,0 +1,9 @@
+:root,
+[data-bs-theme=light] {
+  --bs-primary: rgba(20, 217, 252, 0.39);
+  --bs-primary-rgb: 20, 217, 252;
+}
+
+.section-g {
+  padding: 100px 0;
+}/*# sourceMappingURL=comm.css.map */
